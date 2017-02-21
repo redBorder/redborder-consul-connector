@@ -16,6 +16,22 @@ class Consul_connector
 	# High level operations
 	####################################################################
 
+	def check_connectivity()
+		status = true
+		begin
+			get_self()
+		rescue
+			status = false
+		end
+		return status
+	end
+
+	def wait_for_connectivity(sleep_time = 10)
+		while !check_connectivity()
+			sleep sleep_time			
+		end
+	end
+
 	# SERVICE MANAGEMENT
 
 	def get_services()
