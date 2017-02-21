@@ -10,8 +10,5 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://rubygems.org/gems/redborder-consul-connector'
   s.license     = 'AGPLv3'
   # Main dependencies
-  s.add_dependency 'net/http'
-  s.add_dependency 'uri'
   s.add_dependency 'json'
-  s.add_dependency 'base64'
 end
