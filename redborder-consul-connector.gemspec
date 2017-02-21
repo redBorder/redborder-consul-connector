@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version     = '0.0.1'
   s.date        = '2017-02-20'
   s.summary     = ""
-  s.description = "A simple hello world gem"
+  s.description = "Gem to communicate with consul API and provide some high level operations useful for redborder enviroments"
   s.authors     = ["Alberto Rodriguez"]
   s.email       = 'arodriguez@redborder.com'
   s.files       = Dir["lib/*"] + %w(LICENSE README.md)
