@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-class Consul_connector
+class RedborderConsulConnector
 	
 	require 'net/http'
 	require 'uri'
