@@ -191,7 +191,7 @@ class RedborderConsulConnector
 			"ID" => id,
 			"Name" => name,
 			"ServiceID" => service_id,			
-			"Script" => script_path,
+			"Args" => ["/bin/bash", script_path],
 			"Interval" => interval,			
 		}
 		body["DeregisterCriticalServiceAfter"] = deregister_ttl if !deregister_ttl.nil?
