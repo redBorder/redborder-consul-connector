@@ -205,7 +205,7 @@ class RedborderConsulConnector
 	def deregister_check(check_id)
 		result = false
 		path = "/v1/agent/check/deregister/#{check_id}"
-		if get_api(path).code == "200"
+		if put_api(path).code == "200"
 			result = true
 		end
 		return result
