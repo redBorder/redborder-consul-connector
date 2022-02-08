@@ -221,6 +221,11 @@ class RedborderConsulConnector
 		response = JSON.parse(get_api(path).body)
 	end
 
+	def get_node_check_health(node_id, check_id)
+		path = "/v1/health/node/#{node_id}?filter=CheckID == \"#{check_id}\""
+		response = JSON.parse(get_api(path).body)
+	end
+
 	####################################################################
 	# Api connector
 	####################################################################
