@@ -202,14 +202,18 @@ class RedborderConsulConnector
 		return result
 	end
 
-	def deregister_check(check_id)
-		result = false
-		path = "/v1/agent/check/deregister/#{check_id}"
-		if put_api(path).code == "200"
-			result = true
-		end
-		return result
-	end
+        def deregister_check_script(check_id)
+                result = false
+                path = "/v1/agent/check/deregister/#{check_id}"
+                begin
+                  if put_api(path).code == "200"
+                        result = true
+                  end
+                rescue
+                        result = false
+                end
+                return result
+        end
 
 	def get_agent_checks(check_id = nil)
 		result = false
