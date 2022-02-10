@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'redborder-consul-connector'
-  s.version     = '0.0.5'
-  s.date        = '2022-02-08'
+  s.version     = '0.0.6'
+  s.date        = '2022-02-10'
   s.summary     = ""
   s.description = "Gem to communicate with consul API and provide some high level operations useful for redborder enviroments"
   s.authors     = ["Alberto Rodriguez", "Miguel Negrón"]
