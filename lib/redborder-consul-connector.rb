@@ -39,6 +39,22 @@ class RedborderConsulConnector
 		response = JSON.parse(get_api(path).body)
 	end
 
+        # Return agent service, empty if service_id is not there
+        def get_service(id)
+                response = {}
+                path = "/v1/agent/service/#{id}"
+                begin 
+                  response = JSON.parse(get_api(path).body)
+                rescue
+                  response = {}
+                end
+        end
+    
+        def get_services(name, tag)
+                path = "/v1/catalog/service/#{name}?filter=\"#{tag}\" in ServiceTags"
+                response = JSON.parse(get_api(path).body)
+        end
+
 	def register_agent_service(name, id, address = "127.0.0.1", port = 8000, tags = [])
 		result = false
 		path = "/v1/agent/service/register"
